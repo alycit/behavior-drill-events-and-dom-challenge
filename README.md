@@ -14,7 +14,7 @@ You will handle each of the following events:
 - [focus](https://developer.mozilla.org/en-US/docs/Web/Events/focus)
 - [select](https://developer.mozilla.org/en-US/docs/Web/Events/select)
 
-There sections in the html that tell you what to do for each event.  Open up the html file in your browser to get started to see what to do.
+There sections in the html that tell you what to do for each event.  Open up the html file in your browser to get started to see what to do.  Start with the click event!
 
 In general for each of the events on the page you will:
 
