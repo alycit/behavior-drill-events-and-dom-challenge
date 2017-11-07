@@ -14,7 +14,9 @@ You will handle each of the following events:
 - [focus](https://developer.mozilla.org/en-US/docs/Web/Events/focus)
 - [select](https://developer.mozilla.org/en-US/docs/Web/Events/select)
 
-For each of the events on the page you will:
+There sections in the html that tell you what to do for each event.  Open up the html file in your browser to get started to see what to do.
+
+In general for each of the events on the page you will:
 
 - Clone a pre-defined template (at the bottom of the html doc).  Example [here](https://codepen.io/alycit/pen/jarjqy).  The template is already styled for you, you just need to use it.
 - Fill it in with the event name and time (HH:MM:SS) and **prepend** it to the div with the `river-content` class.
