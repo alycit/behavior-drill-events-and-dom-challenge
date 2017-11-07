@@ -1,0 +1,147 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+  font-family: 'Cabin', sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 800px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 20% 75px 70% 40px;
+  grid-gap: 10px;
+  grid-template-areas:
+  "header header header"
+  "counts counts counts"
+  "left-events river right-events"
+  "footer footer footer";
+}
+
+.border {
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+.header {
+  grid-area: header;
+  background-color: #1983AB;
+}
+
+.counts {
+  background-color: #814C97;
+  color: white;
+  grid-area: counts;
+}
+
+.counts > div {
+  width: 75px;
+  text-align: center;
+}
+
+.counts span {
+  color: yellow;
+}
+
+.left-events {
+  grid-area: left-events;
+  background-color: #299F94;
+}
+
+.river {
+  grid-area: river;
+  background-color: #51CDF2;
+}
+
+#river {
+  justify-content: flex-start;
+}
+
+.river h2 {
+  margin: 10px 0 20px;
+}
+
+.right-events {
+  grid-area: right-events;
+  background-color: #299F94;
+}
+
+.column-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 10px 0 10px;
+}
+
+.row-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+  /*height: 275px;*/
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.card p {
+  margin: 0 0 15px 0;
+}
+
+.river-content {
+  height: 995px;
+  width: 100%;
+  overflow: auto;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #1983AB;
+}
+
+.fun {
+  font-family: 'Rammetto One', cursive;
+  text-align: center;
+}
+
+.button {
+  color: white;
+  background-color: red;
+  border: solid 1px red;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+.mouse, .select {
+  background-color: #1983AB;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.select {
+  background-color: red;
+}
+
+.card h3 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.click-container {
+  margin-bottom: 10px;
+}

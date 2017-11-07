@@ -1,0 +1,113 @@
+<html>
+<head>
+  <title>Bop It!</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Rammetto+One" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="app.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header border row-flex">
+      <div><img src="images/bop-it.jpg" /></div>
+      <div><img src="images/Bop-It_Logo.png" /></div>
+      <div><img src="images/bop-it.jpg" /></div>
+    </div>
+    <div class="counts border row-flex">
+      <div><p>Click Count<br/><span id="clickCount">0</span></p></div>
+      <div><p>Mouseover Count<br/><span id="mouseoverCount">0</span></p></div>
+      <div><p>Mouseout Count<br/><span id="mouseoutCount">0</span></p></div>
+      <div><p>Submit Count<br/><span id="submitCount">0</span></p></div>
+      <div><p>Keyup Count<br/><span id="keyupCount">0</span></p></div>
+      <div><p>Change Count<br/><span id="changeCount">0</span></p></div>
+      <div><p>Focus Count<br/><span id="focusCount">0</span></p></div>
+      <div><p>Blur<br/>Count<br/><span id="blurCount">0</span></p></div>
+      <div><p>Select Count<br/><span id="selectCount">0</span></p></div>
+    </div>
+    <div class="left-events border column-flex">
+      <div class="click card">
+        <h3 class="fun">CLICK IT!</h3>
+        <p><a href="#" id="click-event">CLICK ME!</a></p>
+        <p>When the link is clicked, add to the event log using the template in this html and update the click count. See this <a href="https://codepen.io/alycit/pen/jarjqy/">codepen</a> for help with templates.</p>
+      </div>
+      <div class="mouseover card">
+        <h3 class="fun">MOUSEOVER IT!</h3>
+        <div class="fun mouse" id="mouseover">PUT YOUR MOUSE HERE!</div>
+        <p>When the mouseover occurs on the div above, add to the event log, update the mouseover count and give the 1st event history div a background color of light purple.</p>
+      </div>
+      <div class="submit card">
+        <h3 class="fun">SUBMIT IT!</h3>
+        <form>
+          <input type="text" name="submit-field">
+          <input type="submit" value="Submit It">
+        </form>
+        <p>When you submit this form, add to the event log, update the submit count, and append the text from the form field to the event history of this event. Alert an error if there is no text in the field.</p>
+      </div>
+      <div class="keyup card">
+        <h3 class="fun">KEYUP IT!</h3>
+        <p><input type="text" name="keyup-field"></p>
+        <p>When you trigger the keyup event, add to the event log, update the keyup count, and  animate the parent div using jquery's animate method.  Make it grow to 300px width and back to normal slowly</p>
+      </div>
+    </div>
+    <div id="river" class="river border column-flex fix">
+      <h2 class="fun">Event History</h2>
+      <div class="river-content">
+        <div class="card">Beginning of Event History</div>
+      </div>
+    </div>
+    <div class="right-events border column-flex">
+      <div class="mouseout card">
+        <h3 class="fun">MOUSEOUT IT!</h3>
+        <div class="fun mouse">HOVER OVER ME & LEAVE</div>
+        <p>When the mouseout occurs on the div, add to the event log, update the mouseout count and give the 3rd event history div a background color of #ccc. Alert an error if there is no 3rd element div.</p>
+      </div>
+      <div class="change card">
+        <h3 class="fun">CHANGE IT!</h3>
+        <form>
+          <select>
+            <option value="0">Select Amount</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </form>
+        <p>When the dropdown changes, add to the event log, update the change count and make the new log element change color and back that number of times using the jquery animate method, alert an error if the selected value is 0.</p>
+      </div>
+      <div class="blur card">
+        <h3 class="fun">BLUR IT!</h3>
+        <form>
+          <input type="text" id="blur-field" />
+        </form>
+         <p>Type in the box and then click on this paragraph causing the box to lose focus (blur).  Add to the event log, update the blur count and reset the form.</p>
+      </div>
+      <div class="focus card">
+        <h3 class="fun">FOCUS IT!</h3>
+        <form>
+          <input type="text" id="focus-field" />
+        </form>
+         <p>Type in the box causing the box to gain focus.  Add to the event log, update the focus count and then make the input in the previous sibling's div gain focus</p>
+      </div>
+    </div>
+    <div class="footer border row-flex">
+      <p>Created with <i class="fa fa-heart" aria-hidden="true"></i> for DBC</p>
+    </div>
+  </div>
+
+  <template id="event-template">
+    <div class="card">
+      <p class="fun"><span class="event-name"></span> event</p>
+      <p class="fun">At <span class="event-time"></span></p>
+      <div class="fun select">SELECT IT!</div>
+      <p>Select the 'SELECT IT!' text with your mouse, on select add to the event log, update the select count, and change the next event history div's background light blue</p>
+    </div>
+  </template>
+</body>
+</html>
